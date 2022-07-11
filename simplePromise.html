@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1 id="demo"></h1>
+    <script>
+        let promise = new Promise((resolve, reject) => {
+            resolve("A message from promise!");
+        });
+        promise.then((result) => document.getElementById("demo").innerHTML = result);
+    </script>
+</body>
+</html>
