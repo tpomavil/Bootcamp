@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1 id="demo1">Demo</h1>
+    <h1 id="demo2"></h1>
+    <script>
+        let promise1 = new Promise((resolve, reject) => {
+            resolve("A message from promise 1!");
+        });
+        promise1.then(function(msg1) {
+            document.getElementById("demo1").innerHTML = msg1;
+            return new Promise(function(resolve, reject) {
+                setTimeout(function() {
+                    resolve('A message from inner promise!');
+                }, 1000);
+            });
+        }).then(function(msg2) {
+            document.getElementById("demo2").innerHTML = msg2;
+        })
+    </script>
+</body>
+</html>

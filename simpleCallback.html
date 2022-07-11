@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>JavaScript Callback using SetTimeout()</h2>
+    <p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+    <h1 id="demo"></h1>
+<script>
+    setTimeout(function() { myFunction("A value passed to my function as a callback."); }, 3000);
+    function myFunction(value) {
+        document.getElementById("demo").innerHTML = value;
+    }
+</script>
+</body>
+</html>
