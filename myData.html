@@ -1,0 +1,15 @@
+<html>
+    <head></head>
+    <body>
+        <h1>My Data</h1>
+        <p id="demo"></p>
+        <script>
+            getText("mydata.txt");
+            async function getText(file) {
+                let x = await fetch(file);
+                let y = await x.text();
+                document.getElementById("demo").innerHTML = y;
+            }
+        </script>
+    </body>
+</html>

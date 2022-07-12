@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>The XMLHttpRequest Object</h2>
+    <div id="demo">
+        <p>Let AJAX change this text.</p>
+        <button type="button" onclick="loadDoc()">Click this to change Content</button>
+    </div>
+    <script>
+        function loadDoc() {
+        const xhttp = new XMLHttpRequest(); //creating an XMLHttpRequest object
+        xhttp.onload = function() {
+            document.getElementById("demo").innerHTML = this.responseText; //server Response properties
+        }
+        xhttp.open("GET", "mydata.txt"); //get data from the file
+        xhttp.send(); //send a Request to a server
+    }
+    </script>
+</body>
+</html>
